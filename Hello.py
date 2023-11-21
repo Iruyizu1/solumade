@@ -13,16 +13,16 @@
 # limitations under the License.
 
 import streamlit as st
-from streamlit.logger import get_logger
-import pandas as pd
-import numpy as np
+from deap import base, creator, tools
 
+# Kode lainnya untuk aplikasi Streamlit Anda
+# ...
 
-@st.cache
-def some_expensive_deap():
-    creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
-    testVar = creator.FitnessMin # This assignment causes Streamlit to fail
+def main():
+    st.title('Aplikasi Streamlit dengan Deap')
 
-resultVar = some_expensive_deap()
-if __name__ == "__main__":
-    run()
+    # Tambahkan fungsionalitas Deap ke dalam aplikasi Anda
+    # Misalnya, inisialisasi creator, toolbox, dan penggunaan algoritma genetika
+
+if __name__ == '__main__':
+    main()
