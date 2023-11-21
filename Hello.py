@@ -22,23 +22,11 @@ from deap import creator
 from deap import tools
 import matplotlib.pyplot as plt
 
-LOGGER = get_logger(__name__)
+@st.cache
+def some_expensive_deap():
+    creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
+    testVar = creator.FitnessMin # This assignment causes Streamlit to fail
 
-
-def run():
-    st.set_page_config(
-        page_title="Hello",
-        page_icon="👋",
-    )
-
-    st.write("# Welcome to Streamlit! 👋")
-
-    st.sidebar.success("Select a demo above.")
-
-    st.markdown(
-
-    )
-
-
+resultVar = some_expensive_deap()
 if __name__ == "__main__":
     run()
