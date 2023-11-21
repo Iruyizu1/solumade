@@ -16,11 +16,7 @@ import streamlit as st
 from streamlit.logger import get_logger
 import pandas as pd
 import numpy as np
-import random
-from deap import base
-from deap import creator
-from deap import tools
-import matplotlib.pyplot as plt
+
 
 @st.cache
 def some_expensive_deap():
